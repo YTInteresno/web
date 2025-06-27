@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>web</title>
+  <link rel="stylesheet" href="main.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700;800&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <div class="wrapper">
+    <header id="home">
+      <nav>
+        <div class="logo">Logo</div>
+
+        <!-- Меню для ПК -->
+        <ul class="desktop-menu">
+          <li class="active"><a href="#home">Home</a></li>
+          <li><a href="#">About us</a></li>
+          <li><a href="#">Portfolio</a></li>
+          <li><a href="#new">News</a></li>
+          <li class="btn"><a href="#">Contacts</a></li>
+        </ul>
+
+        <!-- Бургер для мобилок -->
+        <button class="burger" id="burger" aria-label="Меню">
+          <span class="line"></span>
+          <span class="line"></span>
+          <span class="line"></span>
+        </button>
+
+        <!-- Мобильное меню -->
+        <div class="menu" id="menu">
+          <ul>
+            <li class="active"><a href="#home">Home</a></li>
+            <li><a href="#">About us</a></li>
+            <li><a href="#">Portfolio</a></li>
+            <li><a href="#new">News</a></li>
+            <li class="btn"><a href="#">Contacts</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <div class="hero container">
+      <div class="hero--info">
+        <h1>Upgrade to coolicons</h1>
+        <p>coolicons is a carefully designed collection of 1.320+ icons with a focus on simplicity and consistency.</p>
+        <button class="btn">Get coolicons</button>
+      </div>
+      <img class="tre" src="/img/1647717308_1-amiel-club-p-krasivie-kartinki-na-prozrachnom-fone-1.png" alt="">
+    </div>
+
+    <div id="new" class="container trending">
+      <div class="games">
+        <div class="block"><img src="/img/Card.svg" alt=""></div>
+        <div class="block"><img src="/img/Card (1).svg" alt=""></div>
+      </div>
+      <div class="games">
+        <div class="block"><img src="/img/Card (4).svg" alt=""></div>
+      </div>
+      <div class="games">
+        <div class="block"><img src="/img/Card (2).svg" alt=""></div>
+        <div class="block"><img src="/img/Card (3).svg" alt=""></div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const burger = document.getElementById("burger");
+    const menu = document.getElementById("menu");
+
+    burger.addEventListener("click", () => {
+      burger.classList.toggle("active");
+      menu.classList.toggle("active");
+    });
+  </script>
+</body>
+</html>

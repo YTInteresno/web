@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700;800&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  color: white;
+  font-size: 16px;
+  background: #000;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.wrapper {
+  background: linear-gradient(180deg, rgba(2, 0, 36, 1) 0%, rgba(112, 9, 121, 1) 48%, rgba(0, 0, 0, 1) 100%);
+  width: 100%;
+  padding: 20px;
+}
+
+.container {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px 20px;
+  backdrop-filter: blur(30px);
+  box-shadow: 0px 0px 30px rgba(227, 228, 237, 0.37);
+  border: 2px solid rgba(255, 255, 255, 0.18);
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.logo {
+  text-transform: uppercase;
+  font-size: 24px;
+  font-weight: 800;
+  color: #fff;
+}
+
+/* Горизонтальное меню для ПК */
+.desktop-menu {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+}
+
+.desktop-menu li a {
+  color: #fff;
+}
+
+.desktop-menu li:not(.btn) a:hover {
+  border-radius: 5px;
+  border-bottom: 3px solid #DC7000;
+  transition: all 200ms ease;
+}
+
+.desktop-menu li.btn a {
+  background: #550065;
+  padding: 9px 17px;
+  border-radius: 5px;
+  transition: all 500ms ease;
+}
+
+.desktop-menu li.btn a:hover {
+  background: #2e013c;
+}
+
+/* Бургер меню */
+.burger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 1100;
+}
+
+.burger .line {
+  width: 25px;
+  height: 3px;
+  background: #fff;
+  transition: 0.3s;
+  border-radius: 2px;
+}
+
+.burger.active .line:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.burger.active .line:nth-child(2) {
+  opacity: 0;
+}
+
+.burger.active .line:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Выезжающее меню */
+.menu {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 70%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.95);
+  transition: right 0.4s ease;
+  padding-top: 100px;
+  z-index: 1000;
+}
+
+.menu.active {
+  right: 0;
+}
+
+.menu ul {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  list-style: none;
+  padding: 0 30px;
+}
+
+.menu ul li a {
+  font-size: 20px;
+  color: #fff;
+}
+
+/* Контент */
+.hero {
+  padding-top: 150px;
+  padding-bottom: 100px;
+  position: relative;
+}
+
+.hero--info {
+  width: 100%;
+  max-width: 400px;
+}
+
+.hero--info h1 {
+  font-size: 32px;
+  font-weight: 600;
+}
+
+.hero--info p {
+  font-weight: 500;
+  line-height: 170%;
+  margin: 20px 0;
+}
+
+.hero--info .btn {
+  background: #2e013c;
+  color: #fff;
+  border-radius: 50px;
+  padding: 15px 30px;
+  border: 0;
+  transition: all 200ms ease;
+}
+
+.hero--info .btn:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.hero .tre {
+  max-width: 50%;
+  position: absolute;
+  top: -10px;
+  right: 0;
+}
+
+.trending {
+  margin-top: 50px;
+}
+
+.trending .games {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 50px 0;
+}
+
+.block {
+  flex: 1 1 calc(50% - 20px);
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.block img {
+  opacity: 1;
+  filter: none;
+  mix-blend-mode: normal;
+  width: 100%;
+  display: block;
+}
+
+/* Мобильная адаптация */
+@media (max-width: 768px) {
+  .desktop-menu {
+    display: none;
+  }
+
+  .burger {
+    display: flex;
+  }
+
+  .menu ul {
+    align-items: flex-start;
+  }
+}
